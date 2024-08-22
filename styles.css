@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+}
+
+h1 {
+    margin: 1rem;
+}
+
+.container {
+    margin: 0 auto;
+    /* width: 30%; */
+    text-align: center;
+    max-width: 90%;
+}
+
+/* xs - 475px */
+
+@media (min-width: 475px) {
+    .container { 
+        max-width: 475px;
+    }
+}
+
+/* sm - 640px */
+
+/* @media (min-width: 640px) {
+    
+} */
+
+/* md - 768px */
+
+/* @media (min-width: 768px) {
+    
+} */
+
+/* lg - 1024px */
+
+/* @media (min-width: 1024px) {
+    
+} */
+
+/* xl - 1280px */
+
+/* @media (min-width: 1280px) {
+    
+} */
+
+/* 2xl - 1536px */
+
+/* @media (min-width: 1536px) {
+    
+} */
+
+.todo-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25em;
+}
+
+#todo-input {
+    /* display: flex; */
+    padding: 0 1em;
+    flex: 1;
+    height: 2rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+#add-todo {
+    width: 15%;
+    border-radius: 1rem;
+    border: none;
+    height: 2rem;
+    background-color: green;
+    padding: 0 1em;
+    color: whitesmoke;
+}
+
+#add-todo:hover {
+    filter: opacity(0.9);
+    cursor: pointer;
+}
+
+#todo-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+li .status {
+    text-decoration: none;
+    filter: opacity(0);
+}
+
