@@ -1,3 +1,10 @@
+:root {
+    --clr-green500 : #22c55e;
+    --clr-slate200 : #e2e8f0;
+    --clr-red500 : #ef4444;
+    --clr-grey800 : #1f2937;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -68,33 +75,68 @@ h1 {
     /* display: flex; */
     padding: 0 1em;
     flex: 1;
-    height: 2rem;
-    border-radius: 1rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-radius: 0.5em;
     border: none;
 }
 
 #add-todo {
     width: 15%;
-    border-radius: 1rem;
+    border-radius: 0.5em;
     border: none;
-    height: 2rem;
-    background-color: green;
-    padding: 0 1em;
+    height: 2.5rem;
+    background-color: var(--clr-green500);
+    /* padding: 0 1em; */
     color: whitesmoke;
 }
 
 #add-todo:hover {
-    filter: opacity(0.9);
+    filter: brightness(1.25);
     cursor: pointer;
 }
 
 #todo-list {
     display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: start;
+    margin-top: 1em;
+    gap: 0.5em;
+}
+
+li {
+    list-style: none;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5em;
+    height: 2rem;
+    /* border: 1px solid red; */
+    background-color: #1f2937;
 }
 
-li .status {
-    text-decoration: none;
-    filter: opacity(0);
+li span {
+    flex: 1;
+    text-align: left;
+    margin: 0 1em;
+    font-size: 1rem;
 }
 
+li button {
+    margin-left: 0.5em;
+}
+
+i {
+    font-size: 1rem;
+    /* color: var(--clr-slate200); */
+    /* background-color: black; */
+    cursor: pointer;
+    /* border-color: var(--clr-grey800); */
+    /* color: var(--clr-slate200); */
+}
+
+i .fa-trash {
+    color: var(--clr-red-500);
+}
