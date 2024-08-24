@@ -31,7 +31,9 @@ function addTodosToDOM(newTask,isCompleted=false) {
     })
     
     const updateBtn = document.createElement('button')
-    updateBtn.innerHTML = '<i class="fa-solid fa-pencil"></i>';
+    updateBtn.innerHTML = '&#x1F589;';
+    updateBtn.style.color = 'lightblue';
+    updateBtn.style.fontSize = '1.25rem';
     updateBtn.addEventListener('click',function() {
         const currentTask = task.textContent;
         const updatedTask = prompt('Update task',currentTask);
@@ -42,7 +44,8 @@ function addTodosToDOM(newTask,isCompleted=false) {
     })
     
     const deleteBtn = document.createElement('button')
-    deleteBtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    deleteBtn.innerHTML = '&#10060;';
+    deleteBtn.style.fontSize = '1rem'
     deleteBtn.addEventListener('click',function() {
         newTodo.remove();
         saveTodos();
