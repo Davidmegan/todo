@@ -31,13 +31,13 @@ function addTodosToDOM(newTask,isCompleted=false) {
     })
     
     const updateBtn = document.createElement('button')
-    updateBtn.innerHTML = '&#x1F589;';
+    updateBtn.innerHTML = '&#128393;';
     updateBtn.style.color = 'lightblue';
     updateBtn.style.fontSize = '1.25rem';
     updateBtn.addEventListener('click',function() {
         const currentTask = task.textContent;
         const updatedTask = prompt('Update task',currentTask);
-        if(updatedTask!='') {
+        if(updatedTask.trim()!='' && updatedTask!=null) {
             task.textContent = updatedTask;
         }
         saveTodos();
