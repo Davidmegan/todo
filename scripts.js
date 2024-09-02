@@ -20,6 +20,7 @@ function addTodosToDOM(newTask,isCompleted=false) {
     const newTodo = document.createElement('li');
     const task = document.createElement('span');
     task.textContent = newTask;
+    task.setAttribute('data-full-text', newTask);
     
     const checkBox = document.createElement('input');
     checkBox.type = 'checkbox';
