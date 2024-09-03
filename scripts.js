@@ -60,8 +60,15 @@ function addTodosToDOM(newTask,isCompleted=false) {
     document.getElementById('todo-list').appendChild(newTodo)
 }
 
-document.getElementById('add-todo').addEventListener('click', function() {
-    
+document.getElementById('add-todo').addEventListener('click', addTodo);
+
+document.getElementById('todo-input').addEventListener('keydown',function(event){
+    if(event.key==='Enter') {
+        addTodo();
+    }
+});
+
+function addTodo() {
     const newTask = document.getElementById('todo-input').value.trim();
     if (newTask=='') {
         alert("Enter a task");
@@ -70,6 +77,10 @@ document.getElementById('add-todo').addEventListener('click', function() {
     addTodosToDOM(newTask);
     saveTodos();
     document.getElementById('todo-input').value='';
-})
+    document.getElementById('todo-input').focus();
+}
 
-document.addEventListener('DOMContentLoaded',loadTodos)
+document.addEventListener('DOMContentLoaded',function() {
+    loadTodos();
+    document.getElementById('todo-input').focus();
+})
